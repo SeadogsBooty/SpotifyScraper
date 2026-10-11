@@ -1,13 +1,11 @@
 name: Canary
 
-# Daily live check against real Spotify endpoints. This is the early-warning
+# Manual live check against real Spotify endpoints. This is the early-warning
 # system: when Spotify changes its pages/JSON and breaks extraction, the live
 # tests fail and a `spotify-breakage` issue is opened or updated (labelled
 # `spotify-breakage`).
 
 on:
-  schedule:
-    - cron: "17 4 * * *"
   workflow_dispatch: {}
 
 permissions:
